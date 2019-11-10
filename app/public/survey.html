@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/restaurant.png" type="image/x-icon"/>
+
+    <!-- TITLE -->
+    <title>Home | Friend Finder</title>
+
+    <!--STYLE-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!--BOOTSTRAP-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--JAVASCRIPT-->
+    <script type-="text/javascript" src="assets/javascript/app.js"></script>
+
+</head>
+
+<body>
+    <h1 class="lead">Survey Questions</h1>
+    <hr>
+    <h2>About You</h2>
+
+    <!-- Form -->
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name (required)</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Link to Photo Image</label>
+          <input type="text" class="form-control" id="photo">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="score1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="score2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="score3">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="score4">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="score5">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="score6">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="score7">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="score8">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="score9">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="score10">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+      </form>
+    <hr>
+    <div>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/awhited16/FriendFinder">GitHub Repo</a></p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">We found you a match!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="match-entry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $("#submitBtn").on("click", function(e) {
+        e.preventDefault();
+
+        //Enter scores into array
+        var scores = [];
+
+        // for () $(scores).push
+
+        var newFriend = {
+          name: $("#name").val().trim(),
+          photo: $("#photo").val().trim(),
+          scores: [parseInt($("#score1").val().trim()), parseInt($("#score2").val().trim()), parseInt($("#score3").val().trim()), 
+          parseInt($("#score4").val().trim()), parseInt($("#score5").val().trim()), parseInt($("#score6").val().trim()), 
+          parseInt($("#score7").val().trim()), parseInt($("#score8").val().trim()), parseInt($("#score9").val().trim()), 
+          parseInt($("#score9").val().trim())]
+        };
+        console.log(newFriend);
+
+        $.post("/api/friends", newFriend)
+        .then(function(data) {
+          console.log("survey.html", data);
+          alert("Adding friend...");
+          console.log(newFriend);
+        });
+
+        // calculateDifference()
+
+        // function calculateDifference() {
+        //   for (var i=0; i < friends.length; i++) {
+        //     //calculate difference in score values
+        //     console.log(totalDifference);
+        //   }
+        // }
+        
+        // console.log()
+
+        $("#myModal").modal("show");
+
+        }
+      );
+  </script>
+
+</body>
+
+</html>
