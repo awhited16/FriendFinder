@@ -1,6 +1,6 @@
 
 
-var htmlRoutes = function(app) {
+module.export = function(app) {
     app.get("/survey", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/"));
     });
@@ -9,7 +9,6 @@ var htmlRoutes = function(app) {
         res.sendFile(path.join(_direname, "../public/home"));
     });
 };
-module.export = htmlRoutes;
 
 // Create our server
 // var server = http.createServer(handleRequest);

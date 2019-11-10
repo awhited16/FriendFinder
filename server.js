@@ -3,7 +3,7 @@ var express = require("express");
 var path = require("path");
 var friends = require("./app/data/friends");
 var app = require("./app/routing/apiRoutes");
-var htmlRoutes = require("./app/routing/htmlRoutes");
+var app = require("./app/routing/htmlRoutes");
 
 // Sets up the Express App
 // =============================================================
@@ -55,13 +55,18 @@ app.post("/api/tables", function(req,res) {
     res.json(newFriend);
 });
 
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/app/public/home.html"));
+});
+
 app.get("/survey", function(req, res) {
     res.sendFile(path.join(__dirname, "/app/public/survey.html"));
 });
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(_dirname, "/app/public/home.html"));
+app.get("default", function(req, res) {
+    res.sendFile(path.join(__dirname, "/app/public/home.html"));
 });
+
 
 // Starts the server to begin listening
 // =============================================================

@@ -20,15 +20,31 @@
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!--JAVASCRIPT-->
-    <script type-="text/javascript" src="assets/javascript/app.js"></script>
+    <style>      
+      body {
+        width: 90%;
+        margin: auto;
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: bolder;
+        padding-top: 20px;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .form-control {
+        width: 500px;
+      }
+    </style>
 
 </head>
 
 <body>
     <h1 class="lead">Survey Questions</h1>
     <hr>
-    <h2>About You</h2>
+    <h2 class="secondary">About You</h2>
 
     <!-- Form -->
     <form>
@@ -40,104 +56,115 @@
           <label for="exampleInputPassword1">Link to Photo Image</label>
           <input type="text" class="form-control" id="photo">
         </div>
+        <hr>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <h2>Question 1</h2>
+            <label for="exampleFormControlSelect1">My ideal Friday night involves a drink and loud music.</label>
             <select class="form-control" id="score1">
-              <option>1</option>
+              <option>1 (Strongly Disagree)</option>
               <option>2</option>
               <option>3</option>
               <option>4</option>
-              <option>5</option>
+              <option>5 (Strongly Agree)</option>
             </select>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
+          <h2>Question 2</h2>
+          <label for="exampleFormControlSelect1">I prefer the book to the movie.</label>
           <select class="form-control" id="score2">
-            <option>1</option>
+            <option>1 (Strongly Disagree)</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5</option>
+            <option>5 (Strongly Agree)</option>
           </select>
       </div>
       <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
+        <h2>Question 3</h2>
+        <label for="exampleFormControlSelect1">I prefer comedies to horror films.</label>
         <select class="form-control" id="score3">
-          <option>1</option>
+          <option>1 (Strongly Disagree)</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5</option>
+          <option>5 (Strongly Agree)</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
+        <h2>Question 4</h2>
+        <label for="exampleFormControlSelect1">I take sweet over salty.</label>
         <select class="form-control" id="score4">
-          <option>1</option>
+          <option>1 (Strongly Disagree)</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5</option>
+          <option>5 (Strongly Agree)</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
+        <h2>Question 5</h2>
+        <label for="exampleFormControlSelect1">My closet is full of colorful clothes.</label>
         <select class="form-control" id="score5">
-          <option>1</option>
+          <option>1 (Strongly Disagree)</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5</option>
+          <option>5 (Strongly Agree)</option>
         </select>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
+      <h2>Question 6</h2>
+      <label for="exampleFormControlSelect1">I love puns.</label>
       <select class="form-control" id="score6">
-        <option>1</option>
+        <option>1 (Strongly Disagree)</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-        <option>5</option>
+        <option>5 (Strongly Agree)</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
+      <h2>Question 7</h2>
+      <label for="exampleFormControlSelect1">I am a morning person.</label>
       <select class="form-control" id="score7">
-        <option>1</option>
+        <option>1 (Strongly Disagree)</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-        <option>5</option>
+        <option>5 (Strongly Agree)</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
+      <h2>Question 8</h2>
+      <label for="exampleFormControlSelect1">I preferred gym class over math class.</label>
       <select class="form-control" id="score8">
-        <option>1</option>
+        <option>1 (Strongly Disagree)</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-        <option>5</option>
+        <option>5 (Strongly Agree)</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
+      <h2>Question 9</h2>
+      <label for="exampleFormControlSelect1">I would rather watch a play than a sports game.</label>
       <select class="form-control" id="score9">
-        <option>1</option>
+        <option>1 (Strongly Disagree)</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-        <option>5</option>
+        <option>5 (Strongly Agree)</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
+      <h2>Question 10</h2>
+      <label for="exampleFormControlSelect1">I prefer a long hike to a day at the pool.</label>
       <select class="form-control" id="score10">
-        <option>1</option>
+        <option>1 (Strongly Disagree)</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
-        <option>5</option>
+        <option>5 (Strongly Agree)</option>
       </select>
     </div>
         <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
