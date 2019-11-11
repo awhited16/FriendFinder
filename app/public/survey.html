@@ -10,12 +10,9 @@
     <title>Home | Friend Finder</title>
 
     <!--BOOTSTRAP-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <!-- CSS -->
     <style>      
       body {
         width: 90%;
@@ -32,6 +29,9 @@
       }
       .form-control {
         width: 500px;
+      }
+      .modal-body {
+        text-align: center;
       }
     </style>
 
@@ -176,19 +176,22 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">We found you a match!</h5>
-            <div class="modal-body">
-              <h3 id="match-name"></h3>
-              <img id="match-img" alt="" height="400px">
-            </div>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body" id="match-entry">
+          <div class="modal-body">
+            <h3 id="match-name"></h3>
+            <div id="match-img"></div>
           </div>
         </div>
       </div>
     </div>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
       $(document).ready(function($) {
@@ -210,11 +213,12 @@
           .then(function(data) {
             console.log("survey.html", data);
             console.log(newFriend);
+            console.log(data.name);
+            console.log(data.photo);
             $("#match-name").text(data.name);
-            $("#match-img").attr("src", data.photo);
+            $("#match-img").html("<img src='" + data.photo + "' width='250'>");
             jQuery.noConflict();
-            // $("#match-modal").modal("show");
-            alert("Your match is " + data);
+            $("#match-modal").modal("show");
             $("#name").val("");
             $("#photo").val("");
           });

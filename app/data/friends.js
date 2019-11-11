@@ -1,7 +1,7 @@
 var friends = [
     {
-        "name":"Sarah",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Phoebe",
+        "photo":"https://i.dailymail.co.uk/1s/2019/07/24/20/16454700-0-image-a-28_1563997833432.jpg",
         "scores":[
             5,
             1,
@@ -16,8 +16,8 @@ var friends = [
         ]
     }, 
     {
-        "name":"Caitlin",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Dixie",
+        "photo":"https://cdnph.upi.com/svc/sv/i/4161487970021/2017/1/14879707196880/Study-finds-high-levels-of-toxic-chemicals-in-house-cats.jpg",
         "scores":[
             2,
             3,
@@ -32,8 +32,8 @@ var friends = [
         ]
     }, 
     {
-        "name":"Angela",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Coal",
+        "photo":"https://i.pinimg.com/originals/cc/89/b2/cc89b23e5d69257539172cd4476186f2.jpg",
         "scores":[
             4,
             5,
@@ -48,8 +48,8 @@ var friends = [
         ]
     },
     {
-        "name":"Nikki",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Sully",
+        "photo":"https://media.nbcdfw.com/images/652*367/fort-worth-cat-generic.jpg",
         "scores":[
             3,
             2,
@@ -64,8 +64,8 @@ var friends = [
         ]
     },
     {
-        "name":"JT",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Herschel",
+        "photo":"https://cff2.earth.com/uploads/2019/07/25191451/The-obesity-epidemic-also-extends-to-cats-study-finds-730x410.jpg",
         "scores":[
             1,
             2,
